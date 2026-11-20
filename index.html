@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Quiz</title>
+    <title>Az vagy</title>
 
     <style>
         * {
@@ -108,9 +108,8 @@
 
     <!-- START SCREEN -->
     <div id="start-screen">
-        <h1>Welcome to the Quiz!</h1>
-        <p>Answer the following questions to complete the quiz.</p>
-        <button onclick="startQuiz()">Start Quiz</button>
+        <h1>Szerinted én fura vagyok?</h1>
+        <button onclick="startQuiz()">Teszteljük le!</button>
     </div>
 
     <!-- QUIZ SCREEN -->
@@ -118,15 +117,14 @@
         <div class="progress" id="progress"></div>
         <h2 id="question"></h2>
         <div id="answers"></div>
-        <button id="next-button" onclick="nextQuestion()">Next</button>
+        <button id="next-button" onclick="nextQuestion()">Következő</button>
         <p id="status"></p>
     </div>
 
     <!-- FINISH SCREEN -->
     <div id="finish-screen" class="hidden">
-        <h1>Thank you!</h1>
-        <p>Your answer has been submitted successfully.</p>
-        <button onclick="restartQuiz()">Restart Quiz</button>
+        <h1>Igen, te nagyon fura vagy!</h1>
+        <button onclick="restartQuiz()">Teszeljük újra?</button>
     </div>
 
 </div>
@@ -138,32 +136,32 @@
     const questions = [
         {
             type: "multiple",
-            question: "What is your favorite color?",
-            answers: ["Red", "Blue", "Green", "Yellow"]
+            question: "Két "dolgozó nő be akar jönni a bárba. Mit teszel?",
+            answers: ["Megugatod őket", "Oui", "Elzavarod, majd odamész a kollégádhoz, hogy büszke-e rád", "Milyen kurvák?"]
         },
         {
             type: "multiple",
-            question: "Which season do you prefer?",
-            answers: ["Spring", "Summer", "Autumn", "Winter"]
+            question: Mit csinálsz ha unatkozol munka közben?",
+            answers: ["Helló!", "Morogsz", "Random dolgokat kérdezel", "Nem is unatkozol"]
         },
         {
             type: "multiple",
-            question: "What is your favorite food?",
-            answers: ["Pizza", "Burger", "Pasta", "Sushi"]
+            question: "Milyen munkakörben dolgozol legközelebb?",
+            answers: ["Felszolgáló (csak konzervatívoknak/tarzannak)", "Hostess", "Torta runner", "Kecskepásztor"]
         },
         {
             type: "multiple",
-            question: "Which animal do you like most?",
-            answers: ["Dog", "Cat", "Horse", "Dolphin"]
+            question: "Látsz egy jó csávót. Mit csinálsz?",
+            answers: ["Úgy állsz, hogy jól lássa mekkora a segged", "Felveszed a rendelését", "Kedvesen beengeded", "Rámorognál, de eszedbe jut, hogy fura lenne"]
         },
         {
             type: "text",
-            question: "Is there anything else you would like to tell us?"
+            question: "Mit kérsz szülinapodra? (De megnézem ám a választ)"
         },
         {
             type: "multiple",
-            question: "How would you describe yourself?",
-            answers: ["Adventurous", "Creative", "Calm", "Ambitious"]
+            question: "Melyik a legfurább kérdés ezek közül?",
+            answers: ["Boxolunk?", "Szerinted én prűd vagyok?", "Jobb csaj vagyok mint xy?", "Egyik sem fura"]
         }
     ];
 
