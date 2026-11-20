@@ -238,6 +238,12 @@
     }
 
     async function nextQuestion() {
+
+         if (currentQuestion >= questions.length) {
+        await submitAnswer();
+        return;
+        }
+        
         const q = questions[currentQuestion];
 
         if (q.type === "multiple" && selectedAnswer === null) {
